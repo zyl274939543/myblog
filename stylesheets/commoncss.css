@@ -9,6 +9,7 @@ header.fixed{height:70px;}
 header .logo{position:fixed;top:20px;left:50px;width:290px;-webkit-transition:all .2s ease-in-out 0s;-moz-transition:all .2s ease-in-out 0s;-ms-transition:all .2s ease-in-out 0s;-o-transition:all .2s ease-in-out 0s;transition:all .2s ease-in-out 0s;}
 header.fixed .logo{width:210px;top:14px;}
 header .logo img.mini{display:none;}
+header .logo h3{text-align:center;}
 header nav.menu{margin:36px 0 0 110px;text-align:center;-webkit-transition:all .2s ease-in-out 0s;-moz-transition:all .2s ease-in-out 0s;-ms-transition:all .2s ease-in-out 0s;-o-transition:all .2s ease-in-out 0s;transition:all .2s ease-in-out 0s;}
 header.fixed nav.menu{margin:22px 0 0 85px;}
 header nav.menu ul li{margin:0 12px;font-size:20px;-webkit-transition:all .2s ease-in-out 0s;-moz-transition:all .2s ease-in-out 0s;-ms-transition:all .2s ease-in-out 0s;-o-transition:all .2s ease-in-out 0s;transition:all .2s ease-in-out 0s;}
