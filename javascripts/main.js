@@ -1,9 +1,11 @@
 window.onload=function(){
 	$(".list-inline li").hover(function(){
 		$(this).addClass("active");
+		alert(getAbsLeft($(this)));
 		$(".line").css("left",getAbsLeft($(this)));
 	},function(){
 		$(this).removeClass("active");
+		alert(getAbsLeft($(".active")));
 		$(".line").css("left",getAbsLeft($(".active")));;
 	})
 }
