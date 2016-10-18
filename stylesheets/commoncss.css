@@ -16,7 +16,7 @@ header nav.menu ul li{margin:0 12px;font-size:20px;-webkit-transition:all .2s ea
 header.fixed nav.menu ul li{margin:0 10px;font-size:16px;}
 header nav.menu ul li a{color:#ccc;letter-spacing:2px;cursor:pointer;}
 header nav.menu ul li a:hover,header nav.menu ul li.active a{color:#00dfb9;text-decoration:none;}
-header nav.menu .line{position:absolute;top:0px;width:0px;height:3px;font-size:3px;background-color:#00dfb9;display:none;}
+header nav.menu .line{position:absolute;top:0px;width:0px;height:3px;font-size:3px;background-color:#00dfb9;display:inline;width:54px;}
 header .hotline{position:fixed;top:32px;right:215px;-webkit-transition:all .2s ease-in-out 0s;-moz-transition:all .2s ease-in-out 0s;-ms-transition:all .2s ease-in-out 0s;-o-transition:all .2s ease-in-out 0s;transition:all .2s ease-in-out 0s;}
 header.fixed .hotline{top:20px;right:185px;}
 header .hotline span{position:fixed;color:#00dfb9;font-family:Arial;font-weight:bold;font-size:26px;letter-spacing:1px;-webkit-transition:all .2s ease-in-out 0s;-moz-transition:all .2s ease-in-out 0s;-ms-transition:all .2s ease-in-out 0s;-o-transition:all .2s ease-in-out 0s;transition:all .2s ease-in-out 0s;}

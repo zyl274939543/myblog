@@ -1,9 +1,17 @@
 window.onload=function(){
 	$(".list-inline li").hover(function(){
 		$(this).addClass("active");
-		$(".line").css("left",$(this).css("left")).css("display": "inline").css("width": "54px");
+		$(".line").css("left",getAbsLeft($(this)));
 	},function(){
 		$(this).removeClass("active");
-		$(".line").css("left",$(".active").css("left")).css("display": "inline").css("width": "54px");;
+		$(".line").css("left",getAbsLeft($(".active")));;
 	})
 }
+function   getAbsLeft(obj){
+	var   l=obj.offsetLeft; 
+	while(obj.offsetParent != null){
+				obj = obj.offsetParent;   
+	l += obj.offsetLeft;   
+		  }
+	return l;
+} 
