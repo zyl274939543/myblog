@@ -1,0 +1,16 @@
+*{margin: 0px;padding: 0px;}
+body{font-size: 13px;}
+.menu .navbar{border-bottom: 1px solid silver;}
+.menu .navbar ul{width:100%;line-height: 30px;}
+.menu .navbar .nav li{width:32%;text-align: center;font-size: 16px;}
+.list{margin-top:51px;}
+.list .row{border-bottom: 1px solid silver;padding: 10px;}
+.list .row .left{width:25%;float: left;text-align: center;}
+.list .row .left .head img{width: 50%;background: url(../img/head.jpg) no-repeat;background-size: 100% 100%;border-radius: 50px;}
+.list .row .left .username{margin-top:5px;}
+.list .row .right{width:73%;display: block;overflow: hidden;float: right;}
+.list .row .right .up{display: block;overflow: hidden;}
+.list .row .right .middle{min-height:40px;color:#9e9e9e;font-size: 10px;padding:4px 0px;}
+.list .row .right .title{float:left;}
+.list .row .right .time{float:right;}
+.list .row .right .down div{float:right;margin-right:10px;}
