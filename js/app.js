@@ -14,9 +14,7 @@ function GetBadList()
 	$.ajax({
 		type:"get",
 		url:"http://cloud.bmob.cn/b042e00844addc94/GetBadInfoList",
-		dataType: 'jsonp',
-		jsonp: "callback",
-        jsonpCallback:"ShowList",
+		dataType: 'json',
 		success:function(data){
 			alert("1");
 		},
@@ -24,10 +22,6 @@ function GetBadList()
 			console.log("error");
 		}
 	});
-}
-function ShowList()
-{
-	alert("1");
 }
 function SetHeadImg(num_id)
 {
