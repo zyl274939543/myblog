@@ -81,6 +81,7 @@ header {
 #logo {
 	float: left;
 	margin: 5px 30px;
+	width:20%;
 }
 header img {
 	width: 60px;
@@ -113,6 +114,7 @@ header img:hover {
 nav {
 	margin-top: 30px;
 	margin-right: 60px;
+	width:20%;
 }
 nav {
 	float: right;
