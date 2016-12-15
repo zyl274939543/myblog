@@ -6,7 +6,26 @@
 **Its a web app, the app data from bmob, including the use of the platform provides a API front-end data interaction and web is html+css+jquery for the front page display, ajax+json for data communication.**
 ###Below I will write a Vue about demo###
 ##Lets do it.##
-<style>
+
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+			<div class="flipper">
+				<div class="front" style="background-color: white;">
+					<div class="nav"><img src="img/nav1.png"></div>
+					<div class="content">
+						<p>＜card＞</p>
+						<p class="middle">＜name＞周玉亮＜/name＞</p>
+						<p class="middle">＜title＞Front-end Engineer＜/title＞</p>
+						<p class="middle">＜mobile＞18757550369＜/mobile＞</p>
+						<p class="middle">＜email>joycoder@aliyun.com＜/email＞</p>
+						<p class="middle">＜link＞github.com/zyl274939543＜/link＞</p>
+						<p>＜/card＞</p>
+					</div>
+				</div>
+				<div class="back" style="background-color: gainsboro;">
+					<img src="img/back_bg.png" style="width: 500px;height: 250px;" />
+				</div>
+			</div>
+			<style>
     	/* entire container, keeps perspective */
 		.flip-container {
 			perspective: 1000;
@@ -53,22 +72,4 @@
 		p{line-height: 10px;}
 		.middle{text-indent: 2em;}
 		</style>
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-			<div class="flipper">
-				<div class="front" style="background-color: white;">
-					<div class="nav"><img src="img/nav1.png"></div>
-					<div class="content">
-						<p>＜card＞</p>
-						<p class="middle">＜name＞周玉亮＜/name＞</p>
-						<p class="middle">＜title＞Front-end Engineer＜/title＞</p>
-						<p class="middle">＜mobile＞18757550369＜/mobile＞</p>
-						<p class="middle">＜email>joycoder@aliyun.com＜/email＞</p>
-						<p class="middle">＜link＞github.com/zyl274939543＜/link＞</p>
-						<p>＜/card＞</p>
-					</div>
-				</div>
-				<div class="back" style="background-color: gainsboro;">
-					<img src="img/back_bg.png" style="width: 500px;height: 250px;" />
-				</div>
-			</div>
 		</div>
