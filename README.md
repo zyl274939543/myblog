@@ -32,3 +32,6 @@
 ***<a href="http://zyl274939543.github.io/myblog/demo/businessCard.html" title="demo">[rolling-over]</a>***
 
 ##Just do it.##
+
+
+<img src="http://zyl274939543.github.io/myblog/img/Vue_demo.png" width="25%">
