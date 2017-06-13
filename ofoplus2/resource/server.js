@@ -65,8 +65,8 @@ var vm = new Vue({
 		      		$(".alert").hide();
 		      		$(".alert-success").show();
 		      		setTimeout(function(){
-						$(".alert-success").hide();
-		      		},5000)
+						$(".alert-success").fadeOut();
+		      		},2000)
 		      		
 		        	//alert("create object success, object id:"+object.id);
 		        	_this.number="";
@@ -76,8 +76,8 @@ var vm = new Vue({
 		     		$(".alert").hide();
 		     		$(".alert-danger").show();
 		     		setTimeout(function(){
-						$(".alert-danger").hide();
-		      		},5000)
+						$(".alert-danger").fadeOut();
+		      		},2000)
 		       	 	//alert("create object fail");
 		      	}
 		    });
