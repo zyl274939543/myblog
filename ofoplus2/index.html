@@ -20,7 +20,7 @@
 		</div>
 		<div class="searchpart" v-if="!ok">
 			<div class="input">
-			  	<input v-model="keyword" type="text" class="form-control" placeholder="ofonumber" aria-describedby="basic-addon1" v-on:keyup.enter="checkData">
+			  	<input v-model="keyword" type="text" class="form-control" placeholder="ofonumber" aria-describedby="basic-addon1" v-on:keyup.enter="checkData" v-on:blur="checkData">
 			</div>
 			<div class="ofolist">
 			</div>
