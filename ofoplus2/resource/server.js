@@ -35,10 +35,10 @@ var vm = new Vue({
 			  	success: function(results) {
 			  		//console.log(results);return 0;
 			  		var html_str="";
-			  		html_str+="<ul>";
+			  		html_str+="<ul class='list-group'>";
 			  		for(var i=0;i<results.length;i++)
 			  		{
-			  			html_str+="<li>";
+			  			html_str+="<li class='list-group-item'>";
 			  			html_str+="<h4>车牌号："+results[i].get("ofonumber")+"</h4>";
 			  			html_str+="<h4>密码："+results[i].get("ofopassword")+"</h4>";
 			  			html_str+="</li>";
