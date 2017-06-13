@@ -62,7 +62,8 @@ var vm = new Vue({
 		    gameScore.save(null, {
 		      	success: function(object) {
 		        	//alert("create object success, object id:"+object.id);
-		        	this.reset();
+		        	this.number="";
+					this.password="";
 		      	},
 		     	error: function(model, error) {
 		       	 	alert("create object fail");
