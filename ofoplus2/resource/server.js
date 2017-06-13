@@ -26,6 +26,10 @@ var vm = new Vue({
 			}
 		},
 		checkData:function(){
+			if(this.keyword=="")
+			{
+				$(".ofolist").html("");return 0;
+			}
 			var GameScore = Bmob.Object.extend("ofoinfo");
 			var query = new Bmob.Query(GameScore);
 			// 查询所有数据
