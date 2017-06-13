@@ -62,12 +62,16 @@ var vm = new Vue({
 		    gameScore.set("ofopassword", parseInt(this.password));
 		    gameScore.save(null, {
 		      	success: function(object) {
+		      		$(".alert").hide();
+		      		$(".alert-success").show();
 		        	//alert("create object success, object id:"+object.id);
 		        	_this.number="";
 					_this.password="";
 		      	},
 		     	error: function(model, error) {
-		       	 	alert("create object fail");
+		     		$(".alert").hide();
+		     		$(".alert-danger").show();
+		       	 	//alert("create object fail");
 		      	}
 		    });
 		},

@@ -6,3 +6,4 @@ body{margin: 0px;padding: 0px;}
 #app .updatepart .input{width:100%;}
 #app .updatepart .inputmargin{margin:20px 0px;}
 #app .updatepart .input .btn-group button{width:50%;}
+#app .alert{display:none;}
