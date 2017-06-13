@@ -51,6 +51,7 @@ var vm = new Vue({
 			});
 		},
 		updateData:function(){
+			var _this=this;
 			if(this.number==""||this.password=="")
 			{
 				return 0;
@@ -62,8 +63,8 @@ var vm = new Vue({
 		    gameScore.save(null, {
 		      	success: function(object) {
 		        	//alert("create object success, object id:"+object.id);
-		        	this.number="";
-					this.password="";
+		        	_this.number="";
+					_this.password="";
 		      	},
 		     	error: function(model, error) {
 		       	 	alert("create object fail");
