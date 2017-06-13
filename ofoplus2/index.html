@@ -19,7 +19,8 @@
 			</ul>
 		</div>
 		<div class="searchpart" v-if="!ok">
-			<div class="input">
+			<div class="input-group">
+				<span class="input-group-addon">Search</span>
 			  	<input v-model="keyword" type="text" class="form-control" placeholder="ofonumber" aria-describedby="basic-addon1" v-on:keyup.enter="checkData" v-on:blur="checkData">
 			</div>
 			<div class="ofolist">
