@@ -28,8 +28,8 @@
 		</div>
 		<div class="updatepart" v-if="ok">
 			<div class="input">
-			  	<input id="editnumber" type="text" v-model="number" class="form-control inputmargin" placeholder="ofonumber" aria-describedby="basic-addon1">
-			  	<input id="editpwd" type="text" v-model="password" class="form-control inputmargin" placeholder="ofopassword" aria-describedby="basic-addon2">
+			  	<input id="editnumber" type="text" v-model="number" class="form-control inputmargin" placeholder="ofonumber" aria-describedby="basic-addon1"  v-on:blur="checkNumber">
+			  	<input id="editpwd" type="text" v-model="password" class="form-control inputmargin" placeholder="ofopassword" aria-describedby="basic-addon2"  v-on:blur="checkPassword">
 			  	<div class="btn-group btn-group-justified inputmargin" role="group" aria-label="...">
 					<button type="button" class="btn btn-default" v-on:click="updateData()">Commit</button>
  					<button type="button" class="btn btn-default" v-on:click="reset()">Reset</button>
@@ -43,6 +43,7 @@
 			<div class="alert alert-danger" role="alert">Oh,shit!What's happen?</div>
 		</div>
 	</div>
+	<div class="img-middle"><img src="img/qrcode.png" class="img-responsive" alt="Responsive image"></div>
 </body>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

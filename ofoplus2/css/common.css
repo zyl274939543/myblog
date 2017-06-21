@@ -5,7 +5,10 @@ body{margin: 0px;padding: 0px;}
 #app .input-group{width:100%;height:50px;padding: 20px 10px;}
 #app .input{width:100%;height:50px;padding: 20px 10px;}
 #app .ofolist{width:100%;padding: 20px 10px;} 
+#app .updatepart{height: 200px;}
 #app .updatepart .input{width:100%;}
 #app .updatepart .inputmargin{margin:20px 0px;}
 #app .updatepart .input .btn-group button{width:50%;}
 #app .alert{display:none;}
+.img-middle{width:100%;}
+.img-middle img{margin: auto;background-size: 50%;}

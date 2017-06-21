@@ -33,10 +33,7 @@ var vm = new Vue({
 			var GameScore = Bmob.Object.extend("ofoinfo");
 			var query = new Bmob.Query(GameScore);
 			// 查询所有数据
-			if(this.keyword!="all")
-			{
-				query.equalTo("ofonumber", parseInt(this.keyword));
-			}
+			query.equalTo("ofonumber", parseInt(this.keyword));
 			//query.limit(10);
 			query.find({
 			  	success: function(results) {
@@ -60,6 +57,10 @@ var vm = new Vue({
 		updateData:function(){
 			var _this=this;
 			if(this.number==""||this.password=="")
+			{
+				return 0;
+			}
+			if(this.checkNumber()||this.checkPassword())
 			{
 				return 0;
 			}
@@ -92,6 +93,26 @@ var vm = new Vue({
 		reset:function(){
 			this.number="";
 			this.password="";
-		}
+		},
+		checkNumber:function() {
+		  	var patrn=/^[0-9]{1,20}$/; 
+			if (!patrn.exec(this.number)) 
+			{
+				this.number="";
+				return false;
+			}else{
+				return true;
+			}
+	  	},
+		checkPassword:function() {
+		  	var patrn=/^[0-9]{1,20}$/; 
+			if (!patrn.exec(this.password)) 
+			{
+				this.password="";
+				return false;
+			}else{
+				return true;
+			}
+	  	}
 	}
 });
