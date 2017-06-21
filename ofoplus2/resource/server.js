@@ -33,7 +33,10 @@ var vm = new Vue({
 			var GameScore = Bmob.Object.extend("ofoinfo");
 			var query = new Bmob.Query(GameScore);
 			// 查询所有数据
-			query.equalTo("ofonumber", parseInt(this.keyword));
+			if(this.keyword=="all")
+			{
+				query.equalTo("ofonumber", parseInt(this.keyword));
+			}
 			//query.limit(10);
 			query.find({
 			  	success: function(results) {
