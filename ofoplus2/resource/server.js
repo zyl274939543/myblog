@@ -47,8 +47,8 @@ var vm = new Vue({
 			  		for(var i=0;i<results.length;i++)
 			  		{
 			  			html_str+="<li class='list-group-item'>";
-			  			html_str+="<h3>车牌号："+results[i].get("ofonumber")+"</h3>";
-			  			html_str+="<h3>密码："+results[i].get("ofopassword")+"</h3>";
+			  			html_str+="<h5>车牌号："+results[i].get("ofonumber")+"</h5>";
+			  			html_str+="<h5>密码："+results[i].get("ofopassword")+"</h5>";
 			  			html_str+="</li>";
 			  		}
 			    	$(".ofolist").html(html_str+"</ul>");
