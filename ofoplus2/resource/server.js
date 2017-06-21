@@ -23,6 +23,7 @@ var vm = new Vue({
 			{
 				$("#update").addClass("active");
 				$("#search").removeClass("active");
+				this.keyword=="";
 			}
 		},
 		checkData:function(){
