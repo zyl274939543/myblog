@@ -9,7 +9,7 @@ var vm = new Vue({
 		password:""
 	},
 	mounted:function(){
-		this.checkData();
+		//this.checkData();
 	},
 	methods:{
 		toggle:function(){
@@ -19,6 +19,7 @@ var vm = new Vue({
 			{
 				$("#search").addClass("active");
 				$("#update").removeClass("active");
+				this.checkData();
 			}else
 			{
 				$("#update").addClass("active");
