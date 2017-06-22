@@ -64,7 +64,7 @@ var vm = new Vue({
 			{
 				return 0;
 			}
-			if(this.checkNumber()||this.checkPassword())
+			if(!this.checkNumber()&&!this.checkPassword())
 			{
 				return 0;
 			}
