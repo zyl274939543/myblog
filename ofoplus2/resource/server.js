@@ -34,14 +34,16 @@ var vm = new Vue({
 			var GameScore = Bmob.Object.extend("ofoinfo");
 			var query = new Bmob.Query(GameScore);
 			// 查询所有数据
-			if(!this.keyword=="all")
+			if(!(this.keyword=="all"))
 			{
 				query.equalTo("ofonumber", parseInt(this.keyword));
 			}
+			console.log(this.keyword);
 			//query.limit(10);
 			query.find({
 			  	success: function(results) {
 			  		//console.log(results);return 0;
+					$(".ofolist").html("");
 			  		var html_str="";
 			  		html_str+="<ul class='list-group'>";
 			  		for(var i=0;i<results.length;i++)
