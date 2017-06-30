@@ -1,18 +1,23 @@
+//bmob application appid,secretid
 Bmob.initialize("c3c5a46889b3dac164496ec0775daf12", "d50540b31eb45221eab3387134378f39");
 var vm = new Vue({
 	el:"#app",
 	data:{
-		ok:false,
-		datalist:"",
-		keyword:"",
-		number:"",
-		password:""
+		ok:false,//menu toggle flag
+		datalist:"",//none
+		keyword:"",//search key word
+		number:"",//put number
+		password:"",//put pwd
+		qrcodeflag:false,//show qrcode flag
+		totalData:0//count 
 	},
 	mounted:function(){
 		//this.checkData();
+		//console.log(this.qrcodeflag);
 	},
 	methods:{
-		toggle:function(){
+		//menutoggle methods
+		menutoggle:function(){
 			this.ok=!this.ok;
 			var id_str=$(".active").attr("id");
 			if(id_str!="search")
@@ -26,7 +31,9 @@ var vm = new Vue({
 				$("#search").removeClass("active");
 			}
 		},
+		//search datalist
 		checkData:function(){
+			var _this=this;
 			if(this.keyword=="")
 			{
 				$(".ofolist").html("");return 0;
@@ -43,6 +50,7 @@ var vm = new Vue({
 			query.find({
 			  	success: function(results) {
 			  		//console.log(results);return 0;
+			  		_this.totalData=results.length;
 					$(".ofolist").html("");
 			  		var html_str="";
 			  		html_str+="<ul class='list-group'>";
@@ -60,6 +68,7 @@ var vm = new Vue({
 			  	}
 			});
 		},
+		//add data methods
 		updateData:function(){
 			var _this=this;
 			if(this.number==""||this.password=="")
@@ -96,10 +105,12 @@ var vm = new Vue({
 		      	}
 		    });
 		},
+		//clear input 
 		reset:function(){
 			this.number="";
 			this.password="";
 		},
+		//Reg validate number
 		checkNumber:function() {
 		  	var patrn=/^[0-9]{1,20}$/; 
 			if (!patrn.exec(this.number)) 
@@ -110,6 +121,7 @@ var vm = new Vue({
 				return true;
 			}
 	  	},
+	  	//Reg validate pwd
 		checkPassword:function() {
 		  	var patrn=/^[0-9]{1,20}$/; 
 			if (!patrn.exec(this.password)) 
