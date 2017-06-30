@@ -9,9 +9,7 @@ var vm = new Vue({
 		number:"",//put number
 		password:"",//put pwd
 		qrcodeflag:false,//show qrcode flag
-		totalData:0,//count
-		splitpage:1,
-		pagenum:10
+		totalData:0//count
 	},
 	mounted:function(){
 		//this.checkData();
