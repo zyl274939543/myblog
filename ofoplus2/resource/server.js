@@ -15,6 +15,15 @@ var vm = new Vue({
 		//this.checkData();
 		//console.log(this.qrcodeflag);
 	},
+	watch:{
+        keyword:{
+            handler:function(val,oldval){
+                this.keyword=val;
+                this.checkData();
+            },
+            deep:true
+        }
+    },
 	methods:{
 		//menutoggle methods
 		menutoggle:function(){
@@ -51,7 +60,12 @@ var vm = new Vue({
 			  	success: function(results) {
 			  		//console.log(results);return 0;
 			  		_this.totalData=results.length;
-					$(".ofolist").html("");
+			  		if(results.length<1)
+			  		{
+			  			var result_tip="<div class='page-header text-center'><h5>No data at all!</h5></div>";
+			  			$(".ofolist").html(result_tip);
+			  			return 0;
+			  		}
 			  		var html_str="";
 			  		html_str+="<ul class='list-group'>";
 			  		for(var i=0;i<results.length;i++)

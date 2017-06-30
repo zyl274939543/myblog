@@ -14,17 +14,14 @@
 	<div id="app">
 		<div class="nav">
 			<ul class="nav nav-tabs">
-			  	<li id="search" role="presentation" class="active"><a href="#search" v-on:click="menutoggle()">Search</a></li>
+			  	<li id="search" role="presentation" class="active"><a href="#search" v-on:click="menutoggle()">Search<span class="badge">{{totalData}}</span></a></li>
 			  	<li id="update" role="presentation"><a href="#add" v-on:click="menutoggle()">update</a></li>
 			</ul>
 		</div>
 		<div class="searchpart" v-if="!ok">
 			<div class="input-group">
 				<span class="input-group-addon">Search</span>
-			  	<input v-model="keyword" type="text" class="form-control" placeholder="ofonumber" aria-describedby="basic-addon1" v-on:keyup.enter="checkData" >
-			</div>
-			<div class="page-header">
-			  	<h4 class="text-right"><small>共：{{totalData}}条记录</small></h1>
+			  	<input v-model="keyword" type="text" class="form-control" placeholder="ofonumber" aria-describedby="basic-addon1" ref="keyword">
 			</div>
 			<div class="ofolist">
 			</div>
