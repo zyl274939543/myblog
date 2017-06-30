@@ -11,7 +11,9 @@ body{margin: 0px;padding: 0px;}
 #app .updatepart .inputmargin{margin:20px 0px;}
 #app .updatepart .input .btn-group button{width:50%;}
 #app .alert{display:none;}
-.img-middle{width: 100%;height: 100%;position: absolute;top: 0px;background-color: rgba(8, 8, 8, 0.5);z-index: 10;}
-.img-middle img{margin: auto;background-size: 50%;top: 50%;position: absolute;left: 50%;transform: translate(-50%,-50%);}
+.img-middle{width: 100%;height: 100%;position: fixed;top: 0px;left: 0px;background-color: rgba(8, 8, 8, 0.5);z-index: 10;}
+.img-middle img{margin: auto;background-size: 50%;top: 50%;position: fixed;left: 50%;transform: translate(-50%,-50%);}
 #app .container .row div{margin-top:10px;margin-bottom:10px;}
 #app .container .row .middle-text{text-align: center;}
+
+#app .searchpart .page-header{margin: 0px;}
