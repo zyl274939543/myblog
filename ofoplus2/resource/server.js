@@ -9,7 +9,9 @@ var vm = new Vue({
 		number:"",//put number
 		password:"",//put pwd
 		qrcodeflag:false,//show qrcode flag
-		totalData:0//count 
+		totalData:0,//count
+		splitpage:1,
+		pagenum:10
 	},
 	mounted:function(){
 		//this.checkData();
@@ -54,8 +56,10 @@ var vm = new Vue({
 			{
 				query.equalTo("ofonumber", parseInt(this.keyword));
 			}
-			console.log(this.keyword);
-			//query.limit(10);
+			//console.log(this.keyword);
+			//query.limit(_this.pagenum);//每页个数
+			//query.skip(_this.splitpage*_this.pagenum);//跳过前多少个数据
+			//query.ascending("ofonumber");
 			query.find({
 			  	success: function(results) {
 			  		//console.log(results);return 0;
@@ -63,8 +67,7 @@ var vm = new Vue({
 			  		if(results.length<1)
 			  		{
 			  			var result_tip="<div class='page-header text-center'><h5>No data at all!</h5></div>";
-			  			$(".ofolist").html(result_tip);
-			  			return 0;
+			  			$(".ofolist").html(result_tip);return 0;
 			  		}
 			  		var html_str="";
 			  		html_str+="<ul class='list-group'>";
@@ -75,7 +78,8 @@ var vm = new Vue({
 			  			html_str+="<h5>密码："+results[i].get("ofopassword")+"</h5>";
 			  			html_str+="</li>";
 			  		}
-			    	$(".ofolist").html(html_str+"</ul>");
+			  		html_str+="</ul>";
+			  		$(".ofolist").html(html_str);
 			  	},
 			  	error: function(error) {
 			    	alert("查询失败: " + error.code + " " + error.message);
