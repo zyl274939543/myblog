@@ -57,7 +57,7 @@ var vm = new Vue({
 			//console.log(this.keyword);
 			//query.limit(_this.pagenum);//每页个数
 			//query.skip(_this.splitpage*_this.pagenum);//跳过前多少个数据
-			//query.ascending("ofonumber");
+			query.ascending("ofonumber");
 			query.find({
 			  	success: function(results) {
 			  		//console.log(results);return 0;
