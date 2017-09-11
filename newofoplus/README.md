@@ -1,2 +1,4 @@
 # myblog
-小亮亮的博客
+一个简单的录入ofo account,passkey的小网站
+
+http://zyl274939543.github.io/myblog/ofoplus2/index.html
